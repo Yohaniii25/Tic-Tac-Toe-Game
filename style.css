@@ -11,7 +11,7 @@ body {
   background: #56baed;
 }
 
-.select-box, .play-board {
+.select-box, .play-board, .result-box{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -76,6 +76,10 @@ body {
   margin-right: 5px;
 }
 
+.play-board {
+  display: none;
+}
+
 .play-board .details {
   background: #fff;
   padding: 7px;
@@ -136,4 +140,24 @@ body {
   text-align: center;
   line-height: 80px;
   color: #56baed
+}
+
+.result-box{
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 350px;
+  width: 100%;
+}
+
+.result-box .won-text{
+  font-size: 25px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+}
+
+.result-box .won-text p{
+  font-weight: 600;
+  margin: 0 3px;
 }
