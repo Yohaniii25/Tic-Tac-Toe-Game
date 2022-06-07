@@ -36,4 +36,21 @@ function clickedBox(element) {
         element.innerHTML = `<i class="${playerXIcon}"></i>`;
         players.classList.add("active");
     }; //adding cross icon tag inside user clicked element
+    element.style.pointerEvents = "none"; //once user select any box then that box can't be selected again
+    bot();
+}
+
+
+// bot click function
+function bot() {
+    let array = []; //creating empty array...we'll store unselected box index in this array
+    for (let i = 0; i< allBox.length; i++) {
+        if (allBox[i].childElementCount == 0) {//if span has no any child element
+            array.push(i); //inserting unclicked or unselected boxes inside array means that span has no children
+            // console.log(i + " " + "has no children");
+        }
+    }
+    let randomBox = array[Math.floor(Math.random() * array.length)]; //getting random index from array so bot will select random unselected box
+    console.log(randomBox);
+    // console.log(array);
 }
